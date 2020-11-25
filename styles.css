@@ -121,14 +121,38 @@ hr {
   padding-inline-start: 0px;
 }
 .footer .fa {
-  text-decoration: none;
-  padding: 10px;
-  font-size: 20px;
+  padding: 15px;
+  font-size: 30px;
   width: 30px;
   text-align: center;
+  text-decoration: none;
+  /* border-radius: 50%; */
 }
-.footer .fa-facebook {
-  background: #3b5998;
+.fa-facebook {
+  background: #3B5998;
   color: white;
-  border-radius: 0.5rem;
+  border-radius: 100%;
+}
+.footer .fa-linkedin {
+  background:#2867B2;
+  color: white;
+  border-radius: 100%;
+}
+
+.footer .fa-github{
+  background: #6e5494;
+  color: white;
+  border-radius: 100%;
+}
+
+.footer .fa-instagram{
+  background: #e4405f;
+  color: white;
+  border-radius: 100%;
+}
+
+.footer .fa-envelope{
+  background: #EA4335;
+  color: white;
+  border-radius: 50%;
 }
