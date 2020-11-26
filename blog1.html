@@ -14,27 +14,119 @@
         </div>
         <ul class="list-non-bullet nav-pills">
             <li class="list-item-inline">
-                <a class="link link-active" href="/">Home</a>
+                <a class="link " href="/">Home</a>
             </li>
             <li  class="list-item-inline">
                 <a class="link" href ="project.html">Projects</a>
 
             </li>
             <li  class="list-item-inline">
-                <a class="link" href ="blogs.html">Blog</a>
+                <a class="link link-active" href ="blogs.html">Blog</a>
             </li>
         </ul>
     </nav>
     <header class="hero">
         
         <h1 class="hero-heading">  Hosting ReactJS app on Netlify</h1>
-        <p class="container-center">I am a final year engineering student in Electronics and Communication at Manipal University Jaipur. I hail from Udaipur, Rajasthan. I have a keen interest in web development and IoT. My technical skills include C, Javascript, React Js, Node Js, Mongo DB. </p> 
+        
         </header>
         
        
+             <section class="section">
+            
+                <div class="container-center">
+                
+                    <p class="container-center " style="line-height: 2;">Netlify offers a free plan. So first, we will log in to Netlify using any one of the options(Github, Gitlab, Bitbucket, Email) given on the login page.
 
-           
-       
+
+
+
+                        Left(Login Page) Center(Authorization) Right(Netlify Online App)
+                        We will start by creating a build of our application by running this command:
+                        
+                        npm run build
+                        So, now our build folder will get generated which will contain all the production-ready files.
+                        
+                        Now, there are two ways to deploy our application to Netlify.
+                        
+                        Drag & Drop
+                        Netifly has made it so easy that we have to just drag and drop our build folder into their online app (Rightmost image above), and our application will get deployed to a live URL.
+                        
+                        Note: Netlify online app is the screen which appears after you have logged into your netlify account.
+                        
+                        Drag & Drop build folder to Netlify Online Application to Deploy
+                        Netlify CLI
+                        Netifly also provides a command line interface that lets you deploy your app straight from the command line. That’s what we will do now.
+                        
+                        So first, we’ll install the CLI using the following command:
+                        
+                        npm install netlify-cli -g
+                        Now, we’re ready to deploy it. To deploy the application we have to make sure that we’re in the project folder and then we will run this command:
+                        
+                        netlify deploy
+                        We might get a pop-up window which will ask us to log in with Netlify and grant access to the Netlify CLI.
+                        
+                        
+                        Pop-Up window asking you to log in with Netlify and grant access to the Netlify CLI
+                        Now, we’ll click Authorize. Now that we’re authorized, we can follow the command line prompts to deploy the app.
+                        
+                        Command Line Prompts
+                        In the console, it says that “This folder isn’t linked to a site yet. What would you like to do?” It wants to know if we want to link this directory to an existing site or create and configure a new site. Since this is a new site, we’ll select Create & configure a new site.
+                        
+                        2. It gives us the option to give our site a name. I’ll type portfolio on netlify (You can type any available name which you like).
+                        
+                        
+                        3. Now it will ask for the Netlify account which you want to use, so I will select my account (Abhishek Jakhar), you can select yours.
+                        
+                        
+                        4. Now, as deploy path, we need to specify our project's build directory which contains the assets for deployment. So, we will type build there and press enter.
+                        
+                        
+                        5. Now, our site will get created and will be deployed to a draft URL first, which we can view by copying and pasting the URL in the browser.
+                        
+                        
+                        Now, back in the console, it says “If everything looks good on your draft URL, take it to live with the --prod flag”.
+                        
+                        So to make our app live, we’ll run the command shown on the command line
+                        
+                        netlify deploy --prod
+                        It will ask us one more time to specify the deploy path for the live build which again is our build folder.
+                        
+                        
+                        Now, in the console output, we get two URLs. A Unique Deploy URL, which represents the unique URL for each individual deployment, and a Live URL which always displays your latest deployment.
+                        
+                        So each time you update your website and deploy it, you’re going to get a unique URL for that deployment. Basically, if we deploy multiple times we will be having multiple unique URLs so that you can point users to a specific version of your application. But the live URL always displays your latest changes at the same URL.
+                        
+                        Note: Netlify automatically secures your site over HTTPS for free.
+                        Page Not Found Error
+                        
+                        404 Error when we refresh application after navigating to a different route
+                        If you’re publishing an app that uses a router like React Router you’ll need to configure redirects and rewrite rules for your URLs. Because when we click on any navigation item to change the page (route) and refresh the browser, we get a 404 error page.
+                        
+                        So Netlify makes configuring redirects and rewrite rules for your URLs really easy. We’ll need to add a file inside the build folder of our app named _redirects. Inside the file, we need to include the following rewrite rule.
+                        
+                        /*    /index.html  200
+                        This rewrite rule is going to serve index.html file instead of giving a 404, no matter what URL the browser requests.
+                        
+                        
+                        The _redirects file inside the build folder containing redirect rule
+                        So now, to view the latest changes in the live URL, we need to deploy with netlify deploy. Again, we’ll specify build as the deploy path. Now, when we see the live URL and refresh the app after changing the route we will no longer see the 404 error page.
+                        
+                        
+                        That's all there is to it. On netlify.com you can see your site settings. There you can do stuff like set up a custom domain or connect the site to a GitHub repository.
+                        
+                        Netlify: All-in-one platform for automating modern web projects
+                        Deploy modern static websites with Netlify. Get CDN, Continuous deployment, 1-click HTTPS, and all the services you…www.netlify.com
+                        
+                        I hope you’ve found this post informative and helpful. I would love to hear your feedback!
+                        
+                        Thank you for reading! </p> 
+
+                 </div>
+
+           </section>
+
+    
     <footer class="footer">
         <div class="footer-heading">AROUND THE WEB</div>
         <ul class="social-links list-non-bullet">
