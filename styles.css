@@ -92,7 +92,7 @@ hr {
   color: var(--dark-gray);
   text-align: center;
 }
-.hero .hero-heading .heading-high {
+ .heading-high {
   color: var(--primary-color);
 }
 .section {
