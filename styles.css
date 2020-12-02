@@ -19,6 +19,9 @@ h1{
 .space {
   padding: 1rem 1rem;
 }
+.space-section{
+  padding: 0rem 1rem;
+}
 .container-center {
   max-width: 600px;
   margin: auto;
