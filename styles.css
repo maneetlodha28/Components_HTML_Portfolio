@@ -98,6 +98,12 @@ hr {
  .heading-high {
   color: var(--primary-color);
 }
+.prof-img{
+  border-radius: 10%;
+  max-width:200px;
+  display: block;
+  margin: auto;
+}
 .section {
   padding: 2rem 0rem;
 }
